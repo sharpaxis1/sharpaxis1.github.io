@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 480" fill="none">
+  <defs>
+    <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="100%" stop-color="#121212"/>
+    </linearGradient>
+    <radialGradient id="sparkGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd9b0" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#ff6a00" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ff6a00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- floor shadow -->
+  <ellipse cx="280" cy="440" rx="220" ry="18" fill="#000" opacity="0.25"/>
+
+  <!-- machine base -->
+  <rect x="90" y="300" width="380" height="110" rx="14" fill="url(#bodyGrad)"/>
+  <rect x="90" y="300" width="380" height="18" rx="9" fill="#ff6a00"/>
+  <rect x="120" y="335" width="90" height="55" rx="6" fill="#1c1c1c" stroke="#ff6a00" stroke-width="2"/>
+  <rect x="230" y="335" width="130" height="55" rx="6" fill="#1c1c1c"/>
+  <circle cx="255" cy="352" r="7" fill="#ff6a00"/>
+  <circle cx="280" cy="352" r="7" fill="#ffffff" opacity="0.85"/>
+  <circle cx="305" cy="352" r="7" fill="#ffa94d"/>
+  <rect x="240" y="368" width="105" height="8" rx="4" fill="#232323"/>
+  <rect x="380" y="335" width="70" height="55" rx="6" fill="#1c1c1c" stroke="#ff6a00" stroke-width="2"/>
+  <path d="M395 362 h40 M395 352 h25 M395 372 h30" stroke="#ff6a00" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- vertical column -->
+  <rect x="160" y="70" width="34" height="240" rx="10" fill="url(#bodyGrad)"/>
+  <rect x="150" y="60" width="54" height="26" rx="8" fill="#121212"/>
+
+  <!-- ram arm -->
+  <rect x="184" y="120" width="230" height="26" rx="8" fill="url(#bodyGrad)"/>
+  <rect x="390" y="100" width="26" height="66" rx="8" fill="#1c1c1c" stroke="#ff6a00" stroke-width="2"/>
+
+  <!-- electrode holder + electrode -->
+  <rect x="392" y="146" width="22" height="70" rx="4" fill="#242424"/>
+  <rect x="397" y="212" width="12" height="60" rx="2" fill="#c9c9c9"/>
+
+  <!-- workpiece / dielectric tank -->
+  <rect x="330" y="290" width="150" height="60" rx="8" fill="#1c1c1c" stroke="#333333" stroke-width="2"/>
+  <rect x="345" y="300" width="120" height="34" rx="4" fill="#202020"/>
+  <rect x="380" y="272" width="50" height="20" rx="3" fill="#d9d9d9"/>
+
+  <!-- spark burst at electrode tip -->
+  <circle cx="403" cy="288" r="30" fill="url(#sparkGlow)" class="spark-bolt"/>
+  <g class="spark-bolt">
+    <path d="M403 276 L397 292 L403 292 L399 304 L411 286 L404 286 Z" fill="#fff0dc"/>
+  </g>
+
+  <!-- flying spark particles -->
+  <circle cx="380" cy="292" r="3" fill="#ffa94d" class="spark-particle" style="animation-delay:0s"/>
+  <circle cx="420" cy="300" r="2.5" fill="#fff0dc" class="spark-particle" style="animation-delay:.3s"/>
+  <circle cx="395" cy="270" r="2" fill="#ff6a00" class="spark-particle" style="animation-delay:.6s"/>
+  <circle cx="415" cy="278" r="2.5" fill="#fff0dc" class="spark-particle" style="animation-delay:.9s"/>
+
+  <!-- control panel legs -->
+  <rect x="120" y="410" width="16" height="24" fill="#121212"/>
+  <rect x="430" y="410" width="16" height="24" fill="#121212"/>
+</svg>
