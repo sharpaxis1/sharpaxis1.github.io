@@ -243,6 +243,10 @@
   </div>
 </footer>
 
+<button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
   var toggle = document.getElementById('menuToggle');
@@ -250,6 +254,14 @@
   toggle.addEventListener('click', function(){
     var open = nav.classList.toggle('open');
     toggle.setAttribute('aria-expanded', String(open));
+  });
+
+  var backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', function(){
+    backToTop.classList.toggle('visible', window.scrollY > 400);
+  });
+  backToTop.addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
 </body>
